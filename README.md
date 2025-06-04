@@ -1,62 +1,59 @@
-# Instrucciones para correr el proyecto
+# Project Setup Instructions
 
-Este repositorio contiene una aplicación fullstack dividida en dos carpetas:
+This repository contains a fullstack application divided into two folders:
 
-- `/frontend`: cliente web construido con Next.js
-- `/backend`: API REST construida con NestJS
+- `/frontend`: Web client built with Next.js
+- `/backend`: REST API built with NestJS
 
-## Requisitos
+## Requirements
 
-- Tener instalado Node.js (versión 18 o superior recomendada)
-- Usar npm como gestor de paquetes
-- Instalar Nest CLI para facilitar algunos comandos:
+- Node.js (version 18 or higher recommended)
+- npm as package manager
+- Nest CLI (optional):
 
 ```bash
 npm install -g @nestjs/cli
 ```
 
-## Instalar dependencias
+## Install Dependencies
 
-1. Entrar a la carpeta del frontend e instalar las dependencias:
+1. Install frontend dependencies:
 
 ```bash
 cd frontend
 npm install
 ```
 
-2. Volver a la raíz y entrar a la carpeta del backend:
+2. Install backend dependencies:
 
 ```bash
 cd ../backend
 npm install
 ```
 
-## Levantar el proyecto
+## Run the Project
 
-1. Levantar el backend en modo desarrollo:
+1. Start the backend in development mode:
 
 ```bash
 cd backend
 npm run start:dev
 ```
 
-2. Levantar el frontend:
+2. Start the frontend (in other terminal):
 
 ```bash
 cd frontend
 npm run dev
 ```
 
-## Ejecutar test en backend
+## Notes
 
-Para correr los test y ver la cobertura:
+- Products are stored in a local JSON file in `/backend/src/data`
+- To run tests and check the coverage run:
 
 ```bash
 cd backend
 npm run test
 npm run test:cov
 ```
-
-## Notas
-
-- Los productos están guardados en un archivo JSON local dentro de `/backend/src/data`
