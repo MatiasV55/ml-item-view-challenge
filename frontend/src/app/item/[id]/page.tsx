@@ -73,13 +73,19 @@ export default function ItemDetailPage() {
       <main className="max-w-7xl mx-auto p-4 grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <div className="relative aspect-square">
-            <Image
-              src={Item.images[selectedImage]}
-              alt={Item.title}
-              fill
-              className="rounded-lg shadow object-cover"
-              priority
-            />
+            {Item.images.length > 0 ? (
+              <Image
+                src={Item.images[selectedImage]}
+                alt={Item.title}
+                fill
+                className="rounded-lg shadow object-cover"
+                priority
+              />
+            ) : (
+              <div className="w-full aspect-square bg-gray-100 flex items-center justify-center">
+                <span className="text-gray-400 text-sm">No image</span>
+              </div>
+            )}
           </div>
           <div className="flex mt-4 gap-2 overflow-x-auto pb-2">
             {Item.images.map((img, index) => (
