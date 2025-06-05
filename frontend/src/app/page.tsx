@@ -11,7 +11,7 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/items`)
+    fetch(`${process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000"}/items`)
       .then((res) => res.json())
       .then((data) => {
         setItems(data);

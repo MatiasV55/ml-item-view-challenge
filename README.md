@@ -15,6 +15,20 @@ This repository contains a fullstack application divided into two folders:
 npm install -g @nestjs/cli
 ```
 
+## Environment Setup
+
+1. In the frontend directory, copy the example environment file:
+```bash
+cd frontend
+cp .env.example .env
+```
+
+2. In the backend directory, copy the example environment file:
+```bash
+cd backend
+cp .env.example .env
+```
+
 ## Install Dependencies
 
 1. Install frontend dependencies:
@@ -46,6 +60,8 @@ npm run start:dev
 cd frontend
 npm run dev
 ```
+
+The application will be available at `http://localhost:3000`
 
 ## Notes
 

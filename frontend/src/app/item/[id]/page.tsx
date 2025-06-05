@@ -25,7 +25,9 @@ export default function ItemDetailPage() {
         setLoading(true);
         setError(null);
         const res = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}/items/${params.id}`
+          `${
+            process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000"
+          }/items/${params.id}`
         );
 
         if (!res.ok) {
